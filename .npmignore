@@ -1,0 +1,9 @@
+# Don't publish these to npm
+demo/
+.github/
+.gitignore
+*.md
+!README.md
+tsconfig.json
+vite.config.ts
+
