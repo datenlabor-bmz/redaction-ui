@@ -1,6 +1,6 @@
 {
   "name": "@datenlabor-bmz/redaction-ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React component library for PDF viewing and redaction",
   "license": "AGPL-3.0",
   "type": "module",
@@ -16,6 +16,10 @@
   "files": [
     "src"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build": "echo 'No build needed - source is published directly'",
     "typecheck": "tsc --noEmit"
