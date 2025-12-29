@@ -18,9 +18,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          # NOTE: Do NOT set registry-url here - it creates .npmrc expecting NODE_AUTH_TOKEN
-          # Trusted Publishing uses OIDC which npm handles automatically
+          # Node 24 includes npm 11.x which is required for Trusted Publishing
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm install
@@ -35,4 +35,4 @@ jobs:
           npm version $VERSION --no-git-tag-version --allow-same-version
 
       - name: Publish to npm (Trusted Publishing via OIDC)
-        run: npm publish --provenance --access public
+        run: npm publish --access public
