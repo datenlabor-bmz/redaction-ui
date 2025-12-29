@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write  # Required for npm provenance / trusted publishing
+      id-token: write  # Required for OIDC / Trusted Publishing
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,9 +33,5 @@ jobs:
           VERSION="${GITHUB_REF#refs/tags/v}"
           npm version $VERSION --no-git-tag-version --allow-same-version
 
-      - name: Publish to npm
+      - name: Publish to npm (Trusted Publishing)
         run: npm publish --provenance --access public
-        env:
-          # For trusted publishing, this can be empty or omitted
-          # For token-based auth, set NPM_TOKEN secret
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
