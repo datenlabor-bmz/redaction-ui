@@ -2,6 +2,8 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  // Use relative paths for GitHub Pages deployment
+  base: './',
   plugins: [react()],
   worker: {
     format: 'es',

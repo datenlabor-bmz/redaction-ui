@@ -4,7 +4,9 @@ A React component library for PDF viewing and redaction.
 
 ## Demo
 
-To run the demo:
+**Live Demo:** https://datenlabor-bmz.github.io/redaction-ui/
+
+To run the demo locally:
 
 ```bash
 cd demo
