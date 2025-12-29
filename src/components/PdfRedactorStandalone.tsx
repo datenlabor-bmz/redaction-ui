@@ -72,7 +72,7 @@ export function PdfRedactorStandalone({
     updateRedactions(prev => prev.map(r => r.id === id ? { ...r, ...updates } : r))
   }, [updateRedactions])
 
-  const handleExport = useCallback((blob: Blob, applied: boolean) => {
+  const handleExport = useCallback((blob: Blob, _applied: boolean) => {
     if (onExport) {
       onExport(blob, redactions.filter(r => r.shouldApply !== false))
     } else {

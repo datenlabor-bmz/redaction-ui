@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import type { Redaction, RedactionRule, PageData } from '../types'
-import { boundingBox, getRedactionText } from '../utils/geometry'
+import { getRedactionText } from '../utils/geometry'
 import { RuleSelector } from './RuleSelector'
 
 export interface RedactionListProps {

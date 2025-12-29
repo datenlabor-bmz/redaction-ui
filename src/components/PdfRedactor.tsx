@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import type {
   PdfRedactorProps,
-  Redaction,
   PageData,
   HighlightInProgress,
   WordData
@@ -18,7 +17,7 @@ export function PdfRedactor({
   selectedId = null,
   zoom = 100,
   onRedactionAdd,
-  onRedactionRemove,
+  onRedactionRemove: _onRedactionRemove,
   onRedactionUpdate,
   onExport,
   onSelectionChange,
