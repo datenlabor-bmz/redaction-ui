@@ -136,4 +136,4 @@ const rules: RedactionRule[] = [
 
 ## License
 
-MIT
+AGPL-3.0 - This library is based on [mupdf.js](https://github.com/ArtifexSoftware/mupdf.js) which is licensed under the GNU Affero General Public License.
