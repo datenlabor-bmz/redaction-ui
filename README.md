@@ -82,7 +82,7 @@ The library provides hooks for AI-powered redaction suggestions:
 
 ## Bundler Configuration
 
-This library uses MuPDF which requires specific bundler configuration for WASM and Web Workers.
+This library publishes TypeScript source directly and requires a bundler (Vite, Webpack, etc.) that can handle TypeScript and Web Workers. It uses MuPDF which requires specific configuration for WASM.
 
 ### Vite
 

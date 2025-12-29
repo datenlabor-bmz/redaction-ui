@@ -24,8 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build
+      - name: Typecheck
+        run: npm run typecheck
 
       - name: Update version from release tag
         if: github.event_name == 'release'
@@ -35,3 +35,7 @@ jobs:
 
       - name: Publish to npm
         run: npm publish --provenance --access public
+        env:
+          # For trusted publishing, this can be empty or omitted
+          # For token-based auth, set NPM_TOKEN secret
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
